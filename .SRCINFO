@@ -1,0 +1,24 @@
+pkgbase = stable-diffusion.cpp-vulkan-git
+	pkgdesc = Stable Diffusion and Flux in pure C/C++ (Vulkan version)
+	pkgver = r156.ac54e00
+	pkgrel = 1
+	url = https://github.com/leejet/stable-diffusion.cpp
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	makedepends = vulkan-headers
+	makedepends = shaderc
+	depends = gcc-libs
+	depends = glibc
+	depends = vulkan-icd-loader
+	provides = stable-diffusion.cpp
+	conflicts = stable-diffusion.cpp
+	source = git+https://github.com/leejet/stable-diffusion.cpp.git
+	source = git+https://github.com/ggerganov/ggml.git
+	source = 001-fix-shared-lib-install.diff
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 6513d6c52b6f5cfffb35f23e092f6c86b65e840ad62394c9bb7a590e5bb075cc
+
+pkgname = stable-diffusion.cpp-vulkan-git
