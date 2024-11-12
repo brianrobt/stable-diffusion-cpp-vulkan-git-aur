@@ -14,7 +14,7 @@ source=("git+https://github.com/leejet/stable-diffusion.cpp.git"
         "001-fix-shared-lib-install.diff")
 sha256sums=('SKIP'
             'SKIP'
-            '6513d6c52b6f5cfffb35f23e092f6c86b65e840ad62394c9bb7a590e5bb075cc')
+            '24954814b385350ca52e7ee5b29f89e66ade873aadb27cd302bfa6ce50ef11a3')
 
 prepare() {
     cd "$srcdir/stable-diffusion.cpp"
