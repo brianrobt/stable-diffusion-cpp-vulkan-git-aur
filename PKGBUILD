@@ -1,5 +1,5 @@
 pkgname=stable-diffusion.cpp-vulkan-git
-pkgver=r156.ac54e00
+pkgver=r191.d46ed5e
 pkgrel=1
 pkgdesc="Stable Diffusion and Flux in pure C/C++ (Vulkan version)"
 license=("MIT")
@@ -30,8 +30,9 @@ pkgver() {
 }
 
 build() {
-    CFLAGS+=" -DNDEBUG"
-    CXXFLAGS+=" -DNDEBUG"
+    # https://archlinux.org/todo/lto-fat-objects/
+    CFLAGS+=" -DNDEBUG -ffat-lto-objects"
+    CXXFLAGS+=" -DNDEBUG -ffat-lto-objects"
     cmake -B build-vulkan -S stable-diffusion.cpp \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX=/usr \
