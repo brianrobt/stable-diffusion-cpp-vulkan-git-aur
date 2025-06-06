@@ -1,13 +1,25 @@
+# Maintainer: Brian Thompson <brianrobt@pm.me>
+
 pkgname=stable-diffusion.cpp-vulkan-git
-pkgver=r191.d46ed5e
+pkgver=r211.10c6501
 pkgrel=1
 pkgdesc="Stable Diffusion and Flux in pure C/C++ (Vulkan version)"
 license=("MIT")
-depends=("gcc-libs" "glibc" "vulkan-icd-loader")
-makedepends=("cmake" "git" "vulkan-headers" "shaderc")
+depends=(
+    "gcc-libs"
+    "glibc"
+    "vulkan-icd-loader"
+    "vulkan-validation-layers"
+)
+makedepends=(
+    "cmake"
+    "git"
+    "vulkan-headers"
+    "shaderc"
+)
 arch=("x86_64")
 url="https://github.com/leejet/stable-diffusion.cpp"
-provides=("stable-diffusion.cpp")
+provides=("stable-diffusion.cpp" "libstable-diffusion.so")
 conflicts=("stable-diffusion.cpp")
 source=("git+https://github.com/leejet/stable-diffusion.cpp.git"
         "git+https://github.com/ggerganov/ggml.git"
